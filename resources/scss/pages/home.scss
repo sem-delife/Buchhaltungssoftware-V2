@@ -1,0 +1,27 @@
+@use '../main';
+@use '../abstracts' as *;
+
+.speachbubble {
+    background-color: clr(neutral, 500);
+    color: clr(neutral, 400);
+    width: fit-content;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    transform: translate(50%, -10px);
+}
+.grid {
+    grid-template-columns: 3fr 1fr;
+    align-items: center;
+}
+
+.list {
+    width: 50%;
+}
+
+.userInfo {
+    background-color: clr(neutral, 500);
+    color: clr(neutral, 400);
+    width: fit-content;
+    border-radius: 15px;
+}

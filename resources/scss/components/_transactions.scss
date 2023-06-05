@@ -1,0 +1,27 @@
+@use '../abstracts' as *;
+@use '../layout/responsive_mixins' as r;
+.list {
+    background-color: clr(neutral, 500);
+    width: 40%;
+    height: 60vh;
+    border-radius: 15px;
+
+    @include r.medium() {
+        width: 60%;
+    }
+}
+
+.transaction {
+    display: flex;
+    width: 100%;
+    &-positiv {
+        label {
+            background-color: clr(accent, 600);
+        }
+    }
+    &-negativ {
+        label {
+            background-color: clr(accent, 700);
+        }
+    }
+}

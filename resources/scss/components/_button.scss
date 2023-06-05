@@ -1,0 +1,16 @@
+@use '../abstracts' as *;
+
+.btn {
+    width: 302px;
+    height: 52px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.btn_neutral {
+    background-color: clr(accent, 500);
+}
+
+.btn_positiv {
+    background-color: clr(accent, 600);
+}

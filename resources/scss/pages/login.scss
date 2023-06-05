@@ -1,0 +1,13 @@
+@use '../main';
+@use '../abstracts' as *;
+
+.login {
+    background-color: clr(neutral, 500);
+    width: fit-content;
+    h1 {
+        width: fit-content;
+    }
+    .grid-even {
+        width: 75%;
+    }
+}

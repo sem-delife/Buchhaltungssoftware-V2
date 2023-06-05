@@ -1,0 +1,16 @@
+@use '../abstracts' as *;
+
+.sub-nav {
+    background-color: clr(neutral, 500);
+    width: 90%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 15px;
+
+    &-small {
+        width: fit-content;
+        border-top-left-radius: unset;
+        border-top-right-radius: unset;
+    }
+}

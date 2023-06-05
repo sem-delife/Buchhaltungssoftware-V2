@@ -1,0 +1,25 @@
+@use '../abstracts' as *;
+
+@each $type, $config in $types {
+    $property: map-get($config, property);
+    $class: map-get($config, class);
+    $values: map-get($config, values);
+
+    @each $name, $value in $values {
+        .#{$class}-#{$name} {
+            #{$property}: $value;
+        }
+
+        @each $variant in (top, right, bottom, left) {
+            $variantClass: '';
+            $variantProperty: $property;
+            @if $variant != '' {
+                $variantClass: '#{str-slice($variant, 1, 1)}';
+                $variantProperty: #{$property}-#{$variant};
+            }
+            .#{$class}#{$variantClass}-#{$name} {
+                #{$variantProperty}: $value;
+            }
+        }
+    }
+}
