@@ -25,6 +25,12 @@ Route::get('/', function () {
         'canRegister' => Route::has('register'),
     ]);
 });
+Route::get('https://sem-delife.github.io/Buchhaltungssoftware-V2/', function () {
+    return Inertia::render('Welcome', [
+        'canLogin' => Route::has('login'),
+        'canRegister' => Route::has('register'),
+    ]);
+});
 
 Route::get('/home', function () {
     $user = Auth::user();
